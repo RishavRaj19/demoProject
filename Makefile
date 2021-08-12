@@ -1,9 +1,10 @@
-all:
-	@echo "make run-hello-world"
-	@echo "make install-libs"
+.PHONY: all run_app clean
 
-run-hello-world:
-	python app.py
+all: run_app
 
-install-libs:
-	apt-get install python
+run_app:
+	@echo "Running app....."
+	@python app.py
+
+clean:
+	@echo "Cleaning up....."
